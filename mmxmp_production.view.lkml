@@ -17,36 +17,6 @@ view: mmxmp_production {
     sql: ${TABLE}."DESCRIPTION" ;;
   }
 
-  dimension: dpages {
-    type: string
-    sql: ${TABLE}."DPAGES" ;;
-  }
-
-  dimension: dpages_raw {
-    type: number
-    sql: ${TABLE}."DPAGES_RAW" ;;
-  }
-
-  dimension: duration {
-    type: string
-    sql: ${TABLE}."DURATION" ;;
-  }
-
-  dimension: duration_raw {
-    type: number
-    sql: ${TABLE}."DURATION_RAW" ;;
-  }
-
-  dimension: engaged {
-    type: string
-    sql: ${TABLE}."ENGAGED" ;;
-  }
-
-  dimension: engaged_raw {
-    type: number
-    sql: ${TABLE}."ENGAGED_RAW" ;;
-  }
-
   dimension: load_type_id {
     type: string
     sql: ${TABLE}."LOAD_TYPE_ID" ;;
@@ -72,35 +42,12 @@ view: mmxmp_production {
     sql: ${TABLE}."MONTH_NAME" ;;
   }
 
-  dimension: pages {
-    type: string
-    sql: ${TABLE}."PAGES" ;;
-  }
-
-  dimension: pages_raw {
-    type: number
-    sql: ${TABLE}."PAGES_RAW" ;;
-  }
 
   dimension: population_id {
-    type: string
+    type: number
     sql: ${TABLE}."POPULATION_ID" ;;
   }
 
-  dimension: sessions {
-    type: string
-    sql: ${TABLE}."SESSIONS" ;;
-  }
-
-  dimension: sessions_raw {
-    type: number
-    sql: ${TABLE}."SESSIONS_RAW" ;;
-  }
-
-  dimension: stability {
-    type: string
-    sql: ${TABLE}."STABILITY" ;;
-  }
 
   dimension: time_period_id {
     type: string
@@ -117,26 +64,6 @@ view: mmxmp_production {
     sql: ${TABLE}."TIME_TYPE_TEXT" ;;
   }
 
-  dimension: visitors {
-    type: string
-    sql: ${TABLE}."VISITORS" ;;
-  }
-
-  dimension: visitors_raw {
-    type: number
-    sql: ${TABLE}."VISITORS_RAW" ;;
-  }
-
-  dimension: visits {
-    type: string
-    sql: ${TABLE}."VISITS" ;;
-  }
-
-  dimension: visits_raw {
-    type: number
-    sql: ${TABLE}."VISITS_RAW" ;;
-  }
-
   dimension: web_id {
     type: string
     sql: ${TABLE}."WEB_ID" ;;
@@ -145,6 +72,81 @@ view: mmxmp_production {
   dimension: web_id2 {
     type: string
     sql: ${TABLE}."WEB_ID2" ;;
+  }
+
+  measure: dpages {
+    type: sum
+    sql: ${TABLE}."DPAGES" ;;
+  }
+
+  measure: dpages_raw {
+    type: sum
+    sql: ${TABLE}."DPAGES_RAW" ;;
+  }
+
+  measure: duration {
+    type: sum
+    sql: ${TABLE}."DURATION" ;;
+  }
+
+  measure: duration_raw {
+    type: sum
+    sql: ${TABLE}."DURATION_RAW" ;;
+  }
+
+  measure: engaged {
+    type: sum
+    sql: ${TABLE}."ENGAGED" ;;
+  }
+
+  measure: engaged_raw {
+    type: sum
+    sql: ${TABLE}."ENGAGED_RAW" ;;
+  }
+
+  measure: pages {
+    type: sum
+    sql: ${TABLE}."PAGES" ;;
+  }
+
+  measure: pages_raw {
+    type: sum
+    sql: ${TABLE}."PAGES_RAW" ;;
+  }
+
+  measure: sessions {
+    type: sum
+    sql: ${TABLE}."SESSIONS" ;;
+  }
+
+  measure: sessions_raw {
+    type: sum
+    sql: ${TABLE}."SESSIONS_RAW" ;;
+  }
+
+  measure: stability {
+    type: sum
+    sql: ${TABLE}."STABILITY" ;;
+  }
+
+  measure: visitors {
+    type: sum
+    sql: ${TABLE}."VISITORS" ;;
+  }
+
+  measure: visitors_raw {
+    type: sum
+    sql: ${TABLE}."VISITORS_RAW" ;;
+  }
+
+  measure: visits {
+    type: sum
+    sql: ${TABLE}."VISITS" ;;
+  }
+
+  measure: visits_raw {
+    type: sum
+    sql: ${TABLE}."VISITS_RAW" ;;
   }
 
   measure: count {
