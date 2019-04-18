@@ -18,3 +18,13 @@ explore: mmxmp_production {
     AND ${cfd_hierarchy.web_id} = ${mmxmp_production.web_id};;
   }
 }
+
+
+explore: mmxmp_production_all_products {
+  join: cfd_hierarchy {
+    type: inner
+    relationship: many_to_one
+    sql_on: ${cfd_hierarchy.month_id} = ${mmxmp_production_all_products.time_period_id}
+      AND ${cfd_hierarchy.web_id} = ${mmxmp_production_all_products.web_id};;
+  }
+}
