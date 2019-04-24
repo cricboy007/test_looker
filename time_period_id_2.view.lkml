@@ -13,7 +13,7 @@ view: time_period_id_2 {
         , break_id
         , visitors
       FROM public.mmxmp_production_all_products
-      WHERE web_id = 590133 AND location_id = 0 AND break_id = 0 AND time_period_id = 229 AND population_id = 826
+      --WHERE web_id = 590133 AND location_id = 0 AND break_id = 0 AND time_period_id = 229 AND population_id = 826
       ;;
   }
 #
