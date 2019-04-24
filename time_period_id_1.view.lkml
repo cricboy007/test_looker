@@ -13,10 +13,24 @@ view: time_period_id_1 {
         , break_id
         , visitors
       FROM public.mmxmp_production_all_products
-      --WHERE web_id = 590133 AND location_id = 0 AND break_id = 0 AND time_period_id = 228 AND population_id = 826
+      WHERE time_period_id = {% parameter input_time_period_id1 %}
+      AND population_id = {% parameter input_population_id1 %}
+      AND product_id = {% parameter input_product_id1 %}
       ;;
   }
 #
+  parameter: input_time_period_id1 {
+    type: unquoted
+  }
+
+  parameter: input_population_id1 {
+    type: unquoted
+  }
+
+  parameter: input_product_id1 {
+    type: unquoted
+  }
+
 #   # Define your dimensions and measures here, like this:
   dimension: product_id1 {
     description: "Unique product_id for each web site"

@@ -29,16 +29,43 @@ explore: mmxmp_production_all_products {
   }
 }
 
-explore: time_period_id_1 {
-
-}
 
 explore: time_period_id_2 {
   join: time_period_id_1 {
-    type: left_outer
+    type: inner
     relationship: one_to_one
     sql_on: ${time_period_id_1.break_id1}=${time_period_id_2.break_id2}
     AND ${time_period_id_1.web_id1}=${time_period_id_2.web_id2}
     AND ${time_period_id_1.location_id1}=${time_period_id_2.location_id2};;
+  }
+  join: cfd_2 {
+    type: inner
+    relationship: many_to_one
+    sql_on: ${time_period_id_2.web_id2}=${cfd_2.web_id}
+      AND ${time_period_id_2.time_period_id2}=${cfd_2.month_id};;
+  }
+  join: cfd_1 {
+    type: inner
+    relationship: many_to_one
+    sql_on: ${time_period_id_1.web_id1}=${cfd_1.web_id}
+      AND ${time_period_id_1.time_period_id1}=${cfd_1.month_id};;
+  }
+}
+
+explore: cfd_1 {
+  join: time_period_id_1 {
+    type: inner
+    relationship: many_to_one
+    sql_on: ${cfd_1.month_id}=${time_period_id_1.time_period_id1}
+    AND ${cfd_1.web_id}=${time_period_id_1.web_id1};;
+  }
+}
+
+explore: cfd_2 {
+  join: time_period_id_2 {
+    type: inner
+    relationship: many_to_one
+    sql_on: ${cfd_2.month_id}=${time_period_id_2.time_period_id2}
+      AND ${cfd_2.web_id}=${time_period_id_2.web_id2};;
   }
 }
