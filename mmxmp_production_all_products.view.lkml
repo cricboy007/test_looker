@@ -43,7 +43,6 @@ view: mmxmp_production_all_products {
     sql: ${TABLE}."MONTH_NAME" ;;
   }
 
-
   dimension: population_id {
     type: string
     sql: ${TABLE}."POPULATION_ID" ;;
@@ -145,6 +144,7 @@ view: mmxmp_production_all_products {
     type: sum
     sql: ${TABLE}."VISITORS" ;;
   }
+
 
   measure: visitors_raw {
     type: sum

@@ -28,3 +28,17 @@ explore: mmxmp_production_all_products {
       AND ${cfd_hierarchy.web_id} = ${mmxmp_production_all_products.web_id};;
   }
 }
+
+explore: time_period_id_1 {
+
+}
+
+explore: time_period_id_2 {
+  join: time_period_id_1 {
+    type: left_outer
+    relationship: one_to_one
+    sql_on: ${time_period_id_1.break_id1}=${time_period_id_2.break_id2}
+    AND ${time_period_id_1.web_id1}=${time_period_id_2.web_id2}
+    AND ${time_period_id_1.location_id1}=${time_period_id_2.location_id2};;
+  }
+}
