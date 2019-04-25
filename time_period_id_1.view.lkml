@@ -25,7 +25,7 @@ view: time_period_id_1 {
 
   parameter: input_population_id1 {
     type: unquoted
-    label: "Population ID_1"
+    label: "Input Population ID_1"
   }
 
   parameter: input_product_id1 {
@@ -54,6 +54,7 @@ view: time_period_id_1 {
   dimension: population_id1 {
     description: "Unique population_id for each web site"
     type: number
+    label: "Population ID_1"
     sql: ${TABLE}.population_id ;;
   }
 

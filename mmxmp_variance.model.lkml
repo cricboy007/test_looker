@@ -30,6 +30,10 @@ explore: mmxmp_production_all_products {
 }
 
 
+explore: time_period_id_1 {
+
+}
+
 explore: time_period_id_2 {
   join: time_period_id_1 {
     type: inner
