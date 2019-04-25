@@ -25,6 +25,7 @@ view: time_period_id_1 {
 
   parameter: input_population_id1 {
     type: unquoted
+    label: "Population ID_1"
   }
 
   parameter: input_product_id1 {
