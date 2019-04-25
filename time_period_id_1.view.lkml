@@ -25,7 +25,6 @@ view: time_period_id_1 {
 
   parameter: input_population_id1 {
     type: unquoted
-    label: "Input Population ID_1"
   }
 
   parameter: input_product_id1 {
@@ -38,6 +37,7 @@ view: time_period_id_1 {
     type: number
     sql: ${TABLE}.product_id ;;
   }
+
 
   dimension: time_type1 {
     description: "Unique time_type for each web site"
@@ -54,7 +54,6 @@ view: time_period_id_1 {
   dimension: population_id1 {
     description: "Unique population_id for each web site"
     type: number
-    label: "Population ID_1"
     sql: ${TABLE}.population_id ;;
   }
 
@@ -94,6 +93,37 @@ view: time_period_id_1 {
     description: "Unique visitors for each web site"
     type: number
     sql: ${TABLE}.visitors ;;
+  }
+
+
+  dimension: str_product_id1 {
+    description: "Unique product_id for each web site"
+    type: string
+    sql: ${TABLE}.product_id ;;
+  }
+
+  dimension: str_time_type1 {
+    description: "Unique time_type for each web site"
+    type: string
+    sql: ${TABLE}.time_type ;;
+  }
+
+  dimension: str_time_period_id1 {
+    description: "Unique time_period_id for each web site"
+    type: string
+    sql: ${TABLE}.time_period_id ;;
+  }
+
+  dimension: str_population_id1 {
+    description: "Unique population_id for each web site"
+    type: string
+    sql: ${TABLE}.population_id ;;
+  }
+
+  dimension: str_load_type_id1 {
+    description: "Unique load_type_id for each web site"
+    type: string
+    sql: ${TABLE}.load_type_id ;;
   }
 
  }
