@@ -99,7 +99,7 @@ view: time_period_id_1 {
   dimension: str_product_id1 {
     description: "Unique product_id for each web site"
     type: string
-    sql: ${TABLE}.product_id ;;
+    sql: TO_VARCHAR(${product_id1}) ;;
   }
 
   dimension: str_time_type1 {
