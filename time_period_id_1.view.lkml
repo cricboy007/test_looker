@@ -13,23 +13,23 @@ view: time_period_id_1 {
         , break_id
         , visitors
       FROM public.mmxmp_production_all_products
-      WHERE time_period_id = {% parameter input_time_period_id1 %}
-      AND population_id = {% parameter input_population_id1 %}
-      AND product_id = {% parameter input_product_id1 %}
+      WHERE {% condition time_period_id1 %} time_period_id {% endcondition %}
+      AND {% condition product_id1 %} product_id {% endcondition %}
+      AND {% condition population_id1 %} population_id {% endcondition %}
       ;;
   }
 #
-  parameter: input_time_period_id1 {
-    type: unquoted
-  }
-
-  parameter: input_population_id1 {
-    type: unquoted
-  }
-
-  parameter: input_product_id1 {
-    type: unquoted
-  }
+#   parameter: input_time_period_id1 {
+#     type: unquoted
+#   }
+#
+#   parameter: input_population_id1 {
+#     type: unquoted
+#   }
+#
+#   parameter: input_product_id1 {
+#     type: unquoted
+#   }
 
 #   # Define your dimensions and measures here, like this:
   dimension: product_id1 {
