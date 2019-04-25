@@ -94,45 +94,45 @@ view: time_period_id_2 {
     sql: ${TABLE}.visitors ;;
   }
 
-  dimension: str_product_id2 {
-    description: "Unique product_id for each web site"
-    type: string
-    sql: ${TABLE}.product_id ;;
-  }
-
-  dimension: str_time_type2 {
-    description: "Unique time_type for each web site"
-    type: string
-    sql: ${TABLE}.time_type ;;
-  }
-
-  dimension: str_time_period_id2 {
-    description: "Unique time_period_id for each web site"
-    type: string
-    sql: ${TABLE}.time_period_id ;;
-  }
-
-  dimension: str_population_id2 {
-    description: "Unique population_id for each web site"
-    type: string
-    sql: ${TABLE}.population_id ;;
-  }
-
-  dimension: str_load_type_id2 {
-    description: "Unique load_type_id for each web site"
-    type: string
-    sql: ${TABLE}.load_type_id ;;
-  }
-
-  dimension: str_location_id2 {
-    description: "Unique location_id for each web site"
-    type: string
-    sql: ${TABLE}.location_id ;;
-  }
-
-  dimension: str_break_id2 {
-    description: "Unique break_id for each web site"
-    type: string
-    sql: ${TABLE}.break_id ;;
-  }
+#   dimension: str_product_id2 {
+#     description: "Unique product_id for each web site"
+#     type: string
+#     sql: ${TABLE}.product_id ;;
+#   }
+#
+#   dimension: str_time_type2 {
+#     description: "Unique time_type for each web site"
+#     type: string
+#     sql: ${TABLE}.time_type ;;
+#   }
+#
+#   dimension: str_time_period_id2 {
+#     description: "Unique time_period_id for each web site"
+#     type: string
+#     sql: ${TABLE}.time_period_id ;;
+#   }
+#
+#   dimension: str_population_id2 {
+#     description: "Unique population_id for each web site"
+#     type: string
+#     sql: ${TABLE}.population_id ;;
+#   }
+#
+#   dimension: str_load_type_id2 {
+#     description: "Unique load_type_id for each web site"
+#     type: string
+#     sql: ${TABLE}.load_type_id ;;
+#   }
+#
+#   dimension: str_location_id2 {
+#     description: "Unique location_id for each web site"
+#     type: string
+#     sql: ${TABLE}.location_id ;;
+#   }
+#
+#   dimension: str_break_id2 {
+#     description: "Unique break_id for each web site"
+#     type: string
+#     sql: ${TABLE}.break_id ;;
+#   }
 }

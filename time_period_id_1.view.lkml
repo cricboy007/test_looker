@@ -96,34 +96,34 @@ view: time_period_id_1 {
   }
 
 
-  dimension: str_product_id1 {
-    description: "Unique product_id for each web site"
-    type: string
-    sql: TO_VARCHAR(${product_id1}) ;;
-  }
-
-  dimension: str_time_type1 {
-    description: "Unique time_type for each web site"
-    type: string
-    sql: ${TABLE}.time_type ;;
-  }
-
-  dimension: str_time_period_id1 {
-    description: "Unique time_period_id for each web site"
-    type: string
-    sql: ${TABLE}.time_period_id ;;
-  }
-
-  dimension: str_population_id1 {
-    description: "Unique population_id for each web site"
-    type: string
-    sql: ${TABLE}.population_id ;;
-  }
-
-  dimension: str_load_type_id1 {
-    description: "Unique load_type_id for each web site"
-    type: string
-    sql: ${TABLE}.load_type_id ;;
-  }
+#   dimension: str_product_id1 {
+#     description: "Unique product_id for each web site"
+#     type: string
+#     sql: TO_VARCHAR(${product_id1}) ;;
+#   }
+#
+#   dimension: str_time_type1 {
+#     description: "Unique time_type for each web site"
+#     type: string
+#     sql: ${TABLE}.time_type ;;
+#   }
+#
+#   dimension: str_time_period_id1 {
+#     description: "Unique time_period_id for each web site"
+#     type: string
+#     sql: ${TABLE}.time_period_id ;;
+#   }
+#
+#   dimension: str_population_id1 {
+#     description: "Unique population_id for each web site"
+#     type: string
+#     sql: ${TABLE}.population_id ;;
+#   }
+#
+#   dimension: str_load_type_id1 {
+#     description: "Unique load_type_id for each web site"
+#     type: string
+#     sql: ${TABLE}.load_type_id ;;
+#   }
 
  }
