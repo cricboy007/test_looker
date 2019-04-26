@@ -12,6 +12,12 @@ view: time_period_id_2 {
         , location_id
         , break_id
         , visitors
+        , country
+        , load_type_name
+        , locationname
+        , month_name
+        , product_name
+        , time_type_text
       FROM public.mmxmp_production_all_products
       WHERE {% condition time_period_id2 %} time_period_id {% endcondition %}
       AND {% condition product_id2 %} product_id {% endcondition %}
@@ -94,6 +100,36 @@ view: time_period_id_2 {
     sql: ${TABLE}.visitors ;;
   }
 
+  dimension: country2 {
+    type: string
+    map_layer_name: countries
+    sql: ${TABLE}."COUNTRY" ;;
+  }
+
+  dimension: load_type_name2 {
+    type: string
+    sql: ${TABLE}."LOAD_TYPE_NAME" ;;
+  }
+
+  dimension: locationname2 {
+    type: string
+    sql: ${TABLE}."LOCATIONNAME" ;;
+  }
+
+  dimension: month_name2 {
+    type: string
+    sql: ${TABLE}."MONTH_NAME" ;;
+  }
+
+  dimension: product_name2 {
+    type: string
+    sql: ${TABLE}."PRODUCT_NAME" ;;
+  }
+
+  dimension: time_type_text2 {
+    type: string
+    sql: ${TABLE}."TIME_TYPE_TEXT" ;;
+  }
 #   dimension: str_product_id2 {
 #     description: "Unique product_id for each web site"
 #     type: string
